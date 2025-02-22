@@ -47,15 +47,15 @@ const NavItem = ({ label, linksNavItem }) => {
         >
             <motion.div
                 className="relative w-full h-full flex items-center justify-center overflow-hidden px-4"
-                initial={{ background: "bg-blue-200" }}
-                whileHover={{ background: "bg-blue-600" }}
+                initial={{ background: "bg-pink-200" }}
+                whileHover={{ background: "bg-pink-600" }}
                 transition={{ duration: 0.3 }}
             >
                 <span className="relative z-10">{label}</span>
                 <span className="ml-2">&#9660;</span>
 
                 <motion.div
-                    className="absolute top-0 right-0 w-0 h-full bg-blue-500"
+                    className="absolute top-0 right-0 w-0 h-full bg-pink-500"
                     animate={{ width: isOpen ? "100%" : "0%" }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
                 />
@@ -83,7 +83,7 @@ const MobileNavItem = ({ label, linksNavItem, isOpen, onClick, onLinkClick }) =>
     return (
         <li className="w-full">
             <div
-                className="w-full flex justify-between items-center px-4 py-2 bg-blue-600 text-white"
+                className="w-full flex justify-between items-center px-4 py-2 bg-pink-500 text-white"
                 onClick={onClick}
             >
                 <span>{label}</span>
@@ -107,7 +107,7 @@ const MobileMenu = ({ links, isOpen, onClose }) => {
 
     return (
         <motion.div
-            className="fixed top-0 left-0 w-64 h-full bg-blue-600 text-white z-50"
+            className=" fixed top-0 left-0 w-64 h-full bg-pink-500 text-white z-50"
             initial={{ x: '-100%' }}
             animate={{ x: isOpen ? '0%' : '-100%' }}
             transition={{ duration: 0.3 }}
@@ -145,7 +145,7 @@ const Navbar = ({ links }) => {
     }, []);
 
     return (
-        <nav className="bg-blue-600 text-white h-15 content-center mb-2">
+        <nav className="bg-pink-700 text-white h-15 content-center">
             <div className="max-w-screen-xl h-full mx-auto flex justify-between items-center px-4">
                 <Link to="/" className="text-xl lg:text-3xl font-bold">Pastelitos.inc</Link>
                 {isMobile ? (
